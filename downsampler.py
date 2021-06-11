@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def export_as_dataframe():
-    url = f'http://localhost:8428/api/v1/export?match[]="{{name!=""}}"}'
+    url = f'http://localhost:8428/api/v1/export?match[]="{{name!=""}}"'
     logging.info("Got data from" + url)
     df = pd.read_json(url, lines=True)
     return df
